@@ -1,0 +1,34 @@
+# Private development and evaluation material
+test-results/
+reports/
+backups/
+dist/
+DEVELOPMENT-WORKFLOW.md
+private/
+conversations/
+transcripts/
+internal-evaluations/
+
+# Credentials and local settings
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+.codex/
+.aws/
+.vscode/
+.idea/
+
+# Local and generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+__pycache__/
+*.pyc
+*.log
+*.tmp
+*.bak
