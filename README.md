@@ -1,65 +1,65 @@
-# Biology Concept Tutor
+# Biology Concept Tutor：生物学概念辅导
 
-A conversational Codex Skill that helps biology students understand unfamiliar concepts in research papers and textbooks, then return to their reading.
+一个用于对话式教学的 Codex Skill，帮助生物学学生理解研究论文和教材中的陌生概念，并回到原文继续阅读。
 
-**Version: v0.2 — Initial Public Beta.** This is an early public testing version, intended for feedback and collaboration.
+**版本：v0.2 — Initial Public Beta（首次公开测试版）。** 当前版本用于早期公开试用、收集反馈和协作改进。
 
-## Who it is for
+## 适用人群
 
-Undergraduate and graduate biology students, researchers encountering unfamiliar topics, and readers rebuilding prerequisite knowledge after a break.
+生物学本科生、研究生、接触陌生领域的研究人员，以及中断学习后希望补足必要基础的读者。
 
-## The problem
+## 希望解决的问题
 
-A definition can introduce more unfamiliar terms than it explains. This Skill guides Codex to identify the smallest knowledge gap blocking the current passage, teach it in manageable steps, and check whether the reader can use the idea independently.
+一个定义可能引入更多尚未理解的术语。这个 Skill 引导 Codex 找出阻碍当前段落理解的最小知识缺口，分步骤补足，并检查读者能否独立应用所学概念。
 
-## Core teaching principles
+## 核心教学原则
 
-- Diagnose existing understanding and reuse knowledge already demonstrated.
-- Select only prerequisites needed for the current reading goal.
-- Teach one necessary gap at a time; avoid unnecessary prerequisite recursion.
-- Ask one focused question at a time and wait for the student's actual answer.
-- Correct specific misconceptions without restarting the whole lesson.
-- Distinguish established background, observations, interpretations, and hypotheses.
-- Return to the original passage after explaining the concept.
-- Check independent explanation and application, then stop when the current goal is met.
-- Respect requests to pause or skip checks; mark untested understanding honestly.
+- 诊断已有理解，复用学生已经展示的知识。
+- 只选择当前阅读目标需要的前置知识。
+- 一次补足一个必要缺口，避免不断递归扩展基础知识。
+- 一次只问一个聚焦的问题，等待学生的真实回答。
+- 针对具体误解进行修正，不重新讲整堂课。
+- 区分已确立的背景知识、观察结果、解释和假设。
+- 解释概念后回到原来的段落。
+- 检查独立解释与应用能力，当前目标达成后停止教学。
+- 尊重暂停或跳过检查的选择，如实标记尚未验证的理解。
 
-## Supported uses
+## 支持的使用场景
 
-- Understanding an unfamiliar term in a textbook or research passage.
-- Connecting a concept to a specific Results statement or figure interpretation task when the relevant material is available.
-- Separating an experimental intervention from its observed outcome.
-- Repairing misconceptions, including confusion between DNA deletion and RNA splicing.
-- Learning across biology topics without applying the same prerequisite chain everywhere.
+- 理解教材或研究论文段落中的陌生术语。
+- 在相关材料可用时，解释概念与具体 Results（结果）陈述或图表解读任务的关系。
+- 区分实验干预与观察到的结果。
+- 修正误解，例如混淆从 DNA 中删除序列与 RNA 剪接。
+- 学习不同生物学主题，根据目标选择前置知识，而不是重复套用同一条知识链。
 
-## Limitations and non-goals
+## 局限与范围
 
-This is an instruction-only Skill, not a standalone application or a complete biology course. It does not provide whole-paper summaries by default, write submission-ready homework, or maintain student profiles across chats.
+这是一个仅由指令构成的 Skill，不是独立应用或完整的生物学课程。默认不总结整篇论文，不代写可直接提交的作业，也不跨聊天维护学生档案。
 
-Model responses can be scientifically wrong or fail to follow the teaching rules. Missing paper context, inaccessible sources, and unavailable verification tools limit what can be established. Local understanding checks do not prove lasting mastery.
+模型可能给出错误的科学解释，也可能未遵循教学规则。缺少论文语境、无法访问来源或缺少核查工具，都会限制能够确认的结论。针对当前目标的理解检查不能证明长期掌握。
 
-The maintainer reports that v0.2 passed three formal human-interaction tests covering Results interpretation, figure interpretation, and cross-topic concept learning. These are promising early checks, not large-scale educational validation. Private transcripts and internal evaluation reports are not distributed, and this public packaging has not undergone a new interaction study.
+据维护者报告，v0.2 已通过三次正式人工交互测试，分别覆盖 Results 解读、图表解读和跨主题概念学习。这些初步检查具有参考价值，但不构成大规模教育验证。公开包不包含私人对话或内部评估报告，也未针对本次公开打包开展新的交互研究。
 
-Compatibility with other AI assistants has not been verified.
+尚未验证与其他 AI 助手的兼容性。
 
-### Language
+### 语言
 
-The preserved v0.2 teaching instructions and reference files are in Simplified Chinese. Teaching defaults to Simplified Chinese; explicitly request English or another language to change the interaction language. This public README and feedback template are in English. English-language teaching quality has not been separately established.
+保留的 v0.2 教学指令和参考文件使用简体中文。默认以简体中文教学；如需英语或其他语言，请明确提出。此 README 使用简体中文，反馈模板仍为英文。英语教学质量尚未单独验证。
 
-## Install in Codex
+## 在 Codex 中安装
 
-Use a current Codex installation that supports local Skills. No additional software packages or API keys are required by this Skill itself; normal Codex access is still required.
+请使用支持本地 Skill 的当前 Codex 版本。这个 Skill 本身不需要额外的软件包或 API 密钥；你仍需具备正常使用 Codex 的条件。
 
-1. Download this repository using GitHub's **Code → Download ZIP**, or download the source archive for the v0.2 release.
-2. Extract it and rename the extracted folder to `biology-concept-tutor`.
-3. Put the folder in **one** of the following locations:
+1. 在 GitHub 中选择 **Code → Download ZIP** 下载仓库，或下载 v0.2 发布页中的源码压缩包。
+2. 解压后，将文件夹重命名为 `biology-concept-tutor`。
+3. 将该文件夹放入以下位置之一：
 
-| Scope | Skill folder |
+| 安装范围 | Skill 文件夹位置 |
 | --- | --- |
-| One project | `<your-project>/.agents/skills/biology-concept-tutor/` |
-| Your user account | `~/.agents/skills/biology-concept-tutor/` (under your home directory) |
+| 单个项目 | `<your-project>/.agents/skills/biology-concept-tutor/` |
+| 当前用户的所有项目 | `~/.agents/skills/biology-concept-tutor/`（位于用户主目录下） |
 
-The resulting layout must include:
+安装后必须包含以下结构：
 
 ```text
 .agents/skills/biology-concept-tutor/
@@ -69,63 +69,63 @@ The resulting layout must include:
     └── manual-evaluation.md
 ```
 
-Keep the repository's license and accompanying documentation with your copy. Avoid an extra nested repository folder between `biology-concept-tutor/` and `SKILL.md`. Opening the downloaded repository by itself does not install its root-level Skill.
+请保留许可证及配套文档。确保 `SKILL.md` 直接位于 `biology-concept-tutor/` 中，不要在两者之间多嵌套一层仓库文件夹。仅打开下载的仓库，不会自动安装其根目录中的 Skill。
 
-For a project installation, open that project in Codex. Codex detects changes automatically; restart it if the Skill does not appear. In the CLI or IDE extension, use `/skills` or type `$` to locate it.
+按项目安装时，请在 Codex 中打开该项目。Codex 会自动检测变更；如果 Skill 未出现，可以重启 Codex。在 CLI 或 IDE 扩展中，使用 `/skills` 或输入 `$` 查找它。
 
-These locations and discovery steps follow the [official Codex Skill documentation](https://learn.chatgpt.com/docs/build-skills), checked on October 8, 2026. This beta is distributed as a folder for manual local installation.
+以上安装位置与发现方式依据 [Codex 官方 Skill 文档](https://learn.chatgpt.com/docs/build-skills)，核查日期为 2026 年 10 月 8 日。本测试版以文件夹形式分发，供用户手动安装到本地。
 
-## Invoke the Skill
+## 调用 Skill
 
-Send a prompt such as:
+可以发送以下提示：
 
 ```text
 $biology-concept-tutor
-Please tutor me in English, asking one question at a time.
-I am reading about introns. I know DNA stores information, but I do not
-understand RNA. Help me understand the concept and return to my passage.
+请用中文辅导我，一次只问一个问题。
+我正在阅读有关内含子的内容。我知道 DNA 储存信息，但不理解 RNA。
+请帮我理解这个概念，并回到原来的段落。
 ```
 
-Add the relevant passage or describe the figure, with its source location, when you are permitted to share it. Without source context, the tutor can explain general concepts but should not invent paper-specific findings.
+在有权分享的前提下，附上相关段落或描述图表，并注明来源位置。缺少原文语境时，教师可以解释一般概念，但不应编造特定论文的发现。
 
-## Example interaction
+## 示例对话
 
-**Illustrative, fictional dialogue; not a real student transcript or a quotation from a paper.** Each tutor turn below follows a separate student reply.
+**以下是虚构的教学示例，不是真实学生对话，也不是论文引文。** 每个教师轮次都发生在学生单独回复之后。
 
-**Student:** $biology-concept-tutor Please tutor me in English. This fictional exercise says, “We deleted intron I from genomic DNA and compared growth with the parent strain.” I know DNA stores information, but what is RNA?
+**学生：** $biology-concept-tutor 请用中文辅导我。这个虚构练习说：“我们从基因组 DNA 中删除了内含子 I，并与亲本菌株比较生长。”我知道 DNA 储存信息，但 RNA 是什么？
 
-**Tutor:** A cell can use a stretch of DNA as a template to make a separate RNA molecule with a corresponding sequence. For this example, think of a source and a working copy; the molecules are distinct. If a piece is removed from one RNA copy, does the DNA template necessarily lose that piece?
+**教师：** 细胞可以用一段 DNA 作为模板，生成一个独立的 RNA 分子，带有相应的序列。在这个例子中，可以把两者理解为来源与工作副本，但它们是不同的分子。如果从一个 RNA 副本中去掉一段，DNA 模板一定也会失去那一段吗？
 
-**Student:** No. Changing the separate copy does not change its source.
+**学生：** 不会。改变独立的副本不会改变它的来源。
 
-**Tutor:** Right. In this example, an intron is a segment included in the initial RNA and removed during RNA splicing; surrounding retained segments are joined. Ordinary splicing changes RNA. Your exercise describes a different operation: deleting a sequence from DNA. How would that deletion affect new RNA made from the edited template?
+**教师：** 对。在这个例子中，内含子是包含在初始 RNA 中、在 RNA 剪接时被去除的片段，周围保留的片段会连接起来。普通剪接改变的是 RNA。你的练习描述了另一种操作：从 DNA 中删除序列。这种删除会怎样影响从编辑后的模板新生成的 RNA？
 
-**Student:** New RNA could not copy the deleted sequence. Splicing instead removes it from RNA after it has been copied.
+**学生：** 新的 RNA 无法复制已经删除的序列。剪接则是在复制之后，从 RNA 中去除那一段。
 
-**Tutor:** You have distinguished the two operations. In the exercise, comparing growth is a way to investigate the deletion's consequences. What does the sentence let you conclude about whether growth changed?
+**教师：** 你已经区分了这两种操作。在练习中，比较生长是研究删除后果的一种方式。这句话能让你判断生长是否发生了变化吗？
 
-**Student:** It only says they compared growth. It does not give a result.
+**学生：** 它只说比较了生长，没有给出结果。
 
-**Tutor:** Exactly. Return to the passage with those distinctions: the intervention changes DNA, and the growth comparison needs a reported result before you can describe its outcome.
+**教师：** 正确。带着这些区别回到原文：这项干预改变 DNA；要描述生长比较的结果，还需要原文报告的观察结果。
 
-## Report bugs or teaching failures
+## 报告问题或教学失败
 
-Open a GitHub Issue using the **Bug or teaching failure** template. Describe the task, expected and actual behavior, prerequisite choices, explanation length, scientific calibration, return to reading, and stopping point. Include the Skill version, Codex client, and model when known.
+请使用 **Bug or teaching failure** 模板提交 GitHub Issue。说明任务、预期与实际行为、前置知识选择、讲解长度、科学断言是否与证据相符、是否帮助回到原文，以及是否在合适的位置停止。如果已知，请附上 Skill 版本、Codex 客户端和模型信息。
 
-Prefer a minimal fictional reproduction and a paraphrase of the failure. Do not upload private conversations, unpublished research, personal information, credentials, or copyrighted paper content without permission. For scientific errors, a public source link and location are more useful than a copied paper.
+优先提供最小的虚构复现示例，并用自己的话描述失败。不经许可，请勿上传私人对话、未发表研究、个人信息、凭据或受版权保护的论文内容。报告科学错误时，公开来源链接与具体位置通常比复制论文内容更有帮助。
 
-## Contribute
+## 参与贡献
 
-Issues and focused pull requests are welcome. Explain the problem and the observable improvement; discuss changes to teaching behavior before proposing a patch. Keep v0.2 behavior intact when making packaging or documentation fixes.
+欢迎提交 Issue 和范围明确的 Pull Request。说明具体问题和可观察的改进；提出教学行为改动前，请先讨论。修复打包或文档问题时，请保持 v0.2 的教学行为。
 
-Submit only material you created or are authorized to redistribute under the project's license, and identify any third-party content and its license. Keep private test records outside the repository.
+仅提交你创作或有权按本项目许可证再分发的材料，并注明第三方内容及其许可证。请将私人测试记录保存在仓库之外。
 
-The [examples and edge cases](references/examples-and-edge-cases.md) explain existing decisions. The [manual evaluation guide](references/manual-evaluation.md) contains reusable synthetic cases, not private evaluation results. It is for reviewers, not ordinary tutoring. Its opening project-local installation description reflects the original development setup; use the installation instructions above for this distribution. Its Chinese test prompts also preserve the original testing context.
+[示例与特殊情况](references/examples-and-edge-cases.md)解释了现有教学决策。[人工评估指南](references/manual-evaluation.md)包含可复用的虚构测试案例，不是私人评估结果；它供评审使用，不用于普通教学。指南开头的项目安装说明反映原开发环境，本公开包请使用上面的安装说明。指南中的中文测试提示也保留了原测试语境。
 
-When reporting a manual test, distinguish file validation, scripted rehearsal, and actual human interaction. Report failures and unresolved understanding without claiming broad learning effectiveness.
+报告人工测试时，请区分文件验证、脚本式演练和真实人工交互。如实报告失败与尚未解决的理解问题，不据此宣称广泛的学习效果。
 
-## Version and license
+## 版本与许可证
 
-This package preserves the v0.2 teaching files unchanged. The planned release title is **v0.2 — Initial Public Beta**. No v0.3 teaching changes are included.
+本公开包保留 v0.2 的教学文件。发布标题为 **v0.2 — Initial Public Beta（首次公开测试版）**，未包含 v0.3 教学改动。
 
-Licensed under the [MIT License](LICENSE). Copyright (c) 2026 takeanothernap-maker. You may use, copy, modify, and redistribute this material under its terms, including retaining the copyright and license notice. The material is provided without warranty.
+本项目采用 [MIT 许可证](LICENSE)。Copyright (c) 2026 takeanothernap-maker。你可以按许可证条款使用、复制、修改和再分发这些材料，包括保留版权声明和许可证声明。材料按原样提供，不附带保证。
